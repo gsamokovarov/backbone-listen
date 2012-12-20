@@ -10,14 +10,14 @@
       this._setupListening();
     },
 
-    // Take a the value of the `listen` property and process them into
+    // Take the value of the `listen` property and process it into
     // `listenTo` calls. `listen` should have the following form:
     //
-    // `{object: {"event": "functionNameOrDeclaration"}`
+    // `{object: {"event": "functionNameOrDeclaration"}}`
     //
     // `object` should have `Backbone.Events` mixed in and should be
-    // available on `this` after `initialize` e.g. you can initialize
-    // it in `initialize` or have somewhere on the prototype chain.
+    // available on `this` after `initialize` e.g. it can be created
+    // in `initialize` or somewhere down the prototype chain.
     _setupListening: function() {
       var listen;
       if (!(listen = _.result(this, 'listen'))) return;
