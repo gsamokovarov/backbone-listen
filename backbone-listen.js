@@ -5,13 +5,14 @@
 
 (function(Backbone) {
 
+  var superView = Backbone.View;
   var superDelegateEvents = Backbone.View.prototype.delegateEvents;
 
-  _.extend(Backbone.View.prototype, {
+  Backbone.View = Backbone.View.extend({
 
-    // Hook up `listen` processing in `delegateEvents`.
-    delegateEvents: function(events) {
-      superDelegateEvents.call(this, events);
+    // Hook up `listen` processing right into the constructor.
+    constructor: function(options) {
+      superView.call(this, options);
       this._setupListening();
     },
 
