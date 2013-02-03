@@ -1,3 +1,8 @@
+// backbone-listen 0.1.0
+//
+// (c) 2013 Genadi Samokovarov
+// Licensed under the MIT license.
+
 (function(Backbone) {
 
   var superDelegateEvents = Backbone.View.prototype.delegateEvents;
